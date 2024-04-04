@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="mt-10 text-center text-2xl mb-5">Currency Converters</h1>
+    </header>
+    <main class="w-full flex justify-center">
+      <form action="" class="flex flex-col justify-center w-fit mx-auto gap-5">
+        <div class="from flex flex-col w-fit mx-auto min-w-justify-center md:flex-row gap-2">
+          <select class="select select-primary w-full select-from min-w-64 max-w-96">
+            <option disabled selected>From</option>
+            <option value="EUR">Euro</option>
+            <option value="USD">US Dollar</option>
+            <option value="JPY">Japanese Yen</option>
+            <option value="CNY">Chinese Yuan</option>
+            <option value="IDR">Indoensia Rupiah</option>
+            <option value="KRW">South Korean Won</option>
+            <option value="MYR">Malaysia Ringgit</option>
+            <option value="SGD">Singapore Dollar</option>
+          </select>
+
+          <input type="number" placeholder="Type here" class="input input-bordered w-full input-from min-w-64 max-w-96 appearance-none" />
+        </div>
+
+        <div class="">
+          <i data-feather="arrow-down" class="mx-auto"></i>
+        </div>
+
+        <div class="to flex flex-col w-fit mx-auto min-w-justify-center md:flex-row gap-2">
+          <select class="select select-success w-full select-to min-w-64 max-w-96">
+            <option disabled selected>TO</option>
+            <option value="EUR">Euro</option>
+            <option value="USD">US Dollar</option>
+            <option value="JPY">Japanese Yen</option>
+            <option value="CNY">Chinese Yuan</option>
+            <option value="IDR">Indoensia Rupiah</option>
+            <option value="KRW">South Korean Won</option>
+            <option value="MYR">Malaysia Ringgit</option>
+            <option value="SGD">Singapore Dollar</option>
+          </select>
+          <div class="result input input-bordered flex items-center w-full min-w-64 max-w-96 bg-success text-black cursor-default">this result</div>
+        </div>
+        <button type="button" class="btn btn-primary mt-2 text-lg w-[70%] min-w-64 max-w-96 mx-auto md:w-[700px] convert-button">Convert</button>
+      </form>
+    </main>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
